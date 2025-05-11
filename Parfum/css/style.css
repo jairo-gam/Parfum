@@ -1,0 +1,176 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    flex: 1;
+}
+
+/* Header optimizado */
+.custom-header {
+    width: 100%;
+    background-color: #000;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(20,20,20,0.9) 100%);
+    z-index: 1;
+}
+
+.logo-container {
+    padding: 4rem 0;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.logo-container h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 5.5rem;
+    letter-spacing: 3px;
+    color: #fff; /* Blanco puro */
+    text-shadow: 0 0 10px rgba(255,255,255,0.2);
+    position: relative;
+    display: inline-block;
+}
+
+.logo-container .subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #f5f5f5; /* Gris muy claro */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    margin-top: 0.5rem !important;
+}
+
+/* Cards */
+.columns.is-multiline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.column.is-3 {
+    width: calc(25% - 1.5rem);
+    min-width: 280px;
+    flex-grow: 1;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content .content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content .content p {
+    flex-grow: 1;
+}
+
+.card-content .content .button {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.card-image {
+    background: #f8f8f8;
+    padding: 1rem;
+}
+
+.card-image img {
+    object-fit: contain;
+    height: 200px;
+    width: 100%;
+}
+
+/* Modal */
+.modal-card {
+    width: 80%;
+    max-width: 800px;
+}
+
+.modal-card-body .image img {
+    object-fit: contain;
+    height: 100%;
+}
+
+/* Estilos para el formulario */
+#contact .box {
+    padding: 2rem;
+}
+
+#contact .textarea {
+    min-height: 150px;
+}
+
+/* Mensaje de confirmación */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.modal-card-body .columns {
+    align-items: center;
+}
+
+.modal-image-container {
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 12px;
+}
+
+.modal-image-container img {
+    max-height: 400px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .logo-container {
+        padding: 2.5rem 0;
+    }
+    
+    .logo-container h1 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .logo-container h1::after {
+        width: 80px;
+        bottom: -8px;
+    }
+}
